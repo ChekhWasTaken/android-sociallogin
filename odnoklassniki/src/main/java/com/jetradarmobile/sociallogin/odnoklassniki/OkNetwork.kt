@@ -49,6 +49,6 @@ class OkNetwork(
     }
 
     private fun createSocialToken(json: JSONObject?)
-            = SocialToken(token = json?.getString("access_token") ?: "")
+            = SocialToken(token = json?.getString("access_token") ?: "", secret = json?.getString("session_secret_key") ?: "")
 
 }
